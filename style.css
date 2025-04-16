@@ -54,3 +54,11 @@ h1 {
 .gallery-thumbnail-item img {
   width: 100%;
 }
+
+.gallery-image-item {
+  display: none;
+}
+
+.gallery-image-item.active {
+  display: block;
+}

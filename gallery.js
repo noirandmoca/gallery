@@ -3,6 +3,8 @@
  *
  * @param {HTMLElement} root ギャラリー全体のルート要素
  */
+
+console.log("あ");
 function initGallery (root) {
   // サムネイル画像
   const thumbnails = root.querySelectorAll('[data-gallery-image]');
