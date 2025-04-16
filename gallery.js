@@ -18,17 +18,19 @@ function initGallery (root) {
   // サムネイルのクリックイベントハンドラ
   function onClickThumbnail () {
     // まずメイン画像をすべて隠す
-    mainImages.forEach(image => /* Insert code here... */);
+    mainImages.forEach(image => image.classList.remove('active'));
     // 表示するメイン画像のIDを取得する
-    const id = /* Insert code here... */;
+    const id = this.getAttribute('data-gallery-image');
     // 表示するメイン画像を取得する
-    const target = /* Insert code here... */;
+    const target = document.getElementById(id);
     // 要素があったら表示する
-    /* Insert code here... */
+    if (target) {
+      target.classList.add('active');
+    }
   }
   
   thumbnails.forEach(tn => {
-    tn.addEventListener('click', /* Insert code here... */);
+    tn.addEventListener('click', onClickThumbnail);
   });
 }
 
